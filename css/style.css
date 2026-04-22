@@ -2,6 +2,7 @@
     --color-font: #fff;
     --background-body: #0c1014;
     --background-header: #05080a;
+    /* --background-links: #cbe300; */
     --background-links: #ff6347;
     --border-bottom-links: #fff;
 }
@@ -42,14 +43,19 @@ body {
     text-decoration: none;
     padding: 8px;
     border-radius: 6px;
-    border-bottom: 2px solid transparent;
     transition: all 0.4s ease-in-out;
 }
 
+a.header__nav--active {
+    background-color: var(--background-links);
+    /* pointer-events: none; */
+    cursor: default;
+}
+
 .list__nav li a:hover {
-    border-bottom: 2px solid var(--border-bottom-links);
     background-color: var(--background-links);
 }
+
 
 .main-title {
     font-size: 62px;
