@@ -50,7 +50,6 @@ body {
 
 a.header__nav--active {
     background-color: var(--color-tomato);
-    /* pointer-events: none; */
     cursor: default;
 }
 
@@ -78,8 +77,9 @@ a.header__nav--active {
 }
 
 .pricing-plan {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
+    width: 260px;
     flex-direction: column;
     border-radius: 6px;
     padding: 20px;
@@ -88,7 +88,6 @@ a.header__nav--active {
 }
 
 .pricing-plan:hover {
-    /* transform: translateY(-3px); */
     transform: scale(1.02); /* aumenta 5% */
 }
 
@@ -96,7 +95,6 @@ a.header__nav--active {
     margin-top: 0;
     padding-bottom: 10px;
     text-transform: uppercase;
-    /* letter-spacing: 2px; */
     border-bottom: 3px solid var(--color-tomato);
 }
 
@@ -138,6 +136,21 @@ a.header__nav--active {
 
 .pricing-plan__cta:hover {
     border: 1px solid var(--color-tomato);
-    /* background-color: #f53d1d; */
     background-color: transparent;
+}
+
+@media screen and (max-width: 780px){
+
+    .header {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .pricing-plan {
+        flex-wrap: wrap;
+    }
 }
